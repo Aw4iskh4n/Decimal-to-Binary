@@ -1,17 +1,32 @@
-How to Run the Decimal-to-Binary
+#include <iostream>
 
-Copy the Code
 
-Open the Decimal-to-Binary.cpp file in the GitHub repository.
+using namespace std;
 
-Copy all the code (Ctrl+C on Windows/Linux or Cmd+C on macOS).
-
-Use an Online Compiler
-
-Go to https://www.programiz.com/cpp-programming/online-compiler/
-
-Paste the code into the code area (Ctrl+V on Windows/Linux or Cmd+V on macOS).
-
-Click the 'Run' button.
-
-Now, follow any on-screen instructions provided by the program to convert Decimal-to-Binary .
+int main() {
+    
+    int dec, arr[50], i, j, length, real;
+    
+    cout<<"Enter any number: ";
+    
+    cin>>dec;
+    
+    real = dec;
+    
+    for (i=0; dec > 0 ; i++)
+    {
+        arr[i] = dec%2;
+        dec = dec/2;
+        
+    }
+    
+    length = i -1 ;
+    
+    
+    cout<< "Binary of "<<real<<" is : " ;
+    for(j = length ; j >= 0 ; j-- )
+    {
+        cout<< arr[j];
+    }
+    
+}
